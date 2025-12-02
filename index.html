@@ -24,10 +24,11 @@
 
     <!-- 네비게이션 -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm border-b border-slate-200 z-50">
-        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-robot text-blue-600 text-xl"></i>
-                <span class="font-bold text-lg text-slate-800">일학습병행 스마트 훈련 알림 봇</span>
+        <div class="container mx-auto px-4 h-20 flex items-center justify-between"> <!-- 높이 h-16 -> h-20으로 약간 확장 -->
+            <div class="flex items-center">
+                <!-- [로고 이미지 적용] -->
+                <!-- 주의: 깃허브에 logo.png 파일을 업로드해야 보입니다 -->
+                <img src="./logo.png" alt="일학습병행공동훈련센터지원단" class="h-12 w-auto object-contain">
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#intro" class="hover:text-blue-600 transition">소개</a>
@@ -41,7 +42,7 @@
     </nav>
 
     <!-- 히어로 섹션 -->
-    <section id="intro" class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="intro" class="pt-36 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div class="container mx-auto px-4 text-center">
             <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-600 text-sm font-semibold mb-4">업무 자동화 프로젝트</span>
             <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-slate-900">
@@ -130,7 +131,7 @@
                     </p>
                     
                     <div class="mb-4">
-                        <a href="https://docs.google.com/spreadsheets/d/1ogmE13lzgK6SNMGgMZWgSwgJdOIMTBQLogPblSEYCDg/copy" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition shadow-md group">
+                        <a href="https://docs.google.com/spreadsheets/d/1OP9HSVQ-PpcGgJnLw3iCf3gcRPsd2Hb8bbhoCM-DfnQ/copy" target="_blank" class="inline-flex items-center px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition shadow-md group">
                             <!-- 아이콘 변경: fa-file-csv -> fa-table -->
                             <i class="fa-solid fa-table mr-2 group-hover:animate-bounce"></i>
                             양식 복사하기 (클릭)
@@ -180,6 +181,7 @@
                     <h3 class="text-xl font-bold text-blue-600 mb-4"><i class="fa-solid fa-table-columns mr-2"></i>1. 시트 입력 규칙 및 검증</h3>
                     <p class="text-slate-600 mb-6">각 열(Column)은 정해진 규칙대로 입력해야 봇이 인식합니다. 규칙을 어길 경우 <strong>H열(상태)</strong>에 에러가 표시됩니다.</p>
                     
+                    <!-- 엑셀 테이블 수정 반영 (장소 E열, 추가 안내사항 F열) -->
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm text-left text-slate-600">
                             <thead class="text-xs text-slate-700 uppercase bg-slate-100">
@@ -205,19 +207,30 @@
                                     <td class="px-6 py-4">[한기대] 자바 실습</td>
                                     <td class="px-6 py-4">
                                         <ul class="list-disc list-inside">
-                                            <li><strong>가장 중요!</strong> <strong>[키워드]</strong> 말머리 필수</li>
+                                            <li><strong>가장 중요!</strong> <code>[키워드]</code> 말머리 필수</li>
                                             <li>이 키워드를 보고 봇이 <strong>어떤 슬랙 채널로 보낼지 결정</strong>함</li>
                                             <li>말머리가 없으면 등록 시 <span class="text-red-500">"말머리 누락" 에러</span> 표시됨</li>
                                         </ul>
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <td class="px-6 py-4 font-bold">E~F열<br>(장소, 안내사항)</td>
-                                    <td class="px-6 py-4">A관 305호, 노트북 지참</td>
+                                    <td class="px-6 py-4 font-bold">E열<br>(장소)</td>
+                                    <td class="px-6 py-4">305호, A동 101호</td>
+                                    <td class="px-6 py-4">
+                                        <ul class="list-disc list-inside">
+                                            <li>훈련 장소 입력</li>
+                                            <li>입력 시 '시작 10분 전 알림'에 <strong>"🏫 장소: ..."</strong>로 표시됨</li>
+                                            <li>비워두면 알림에서 장소 항목이 생략됨</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-6 py-4 font-bold">F열<br>(추가 안내사항)</td>
+                                    <td class="px-6 py-4">노트북 지참, 과제물 제출</td>
                                     <td class="px-6 py-4">
                                         <ul class="list-disc list-inside">
                                             <li>여기에 적은 내용은 <strong>'시작 10분 전 알림'</strong>에만 포함됨</li>
-                                            <li>공란 시 <strong>알림 내용에 미포함</strong></li>
+                                            <li>공란 시 알림에서 내용 생략</li>
                                             <li>종료 알림에는 포함되지 않음</li>
                                         </ul>
                                     </td>
@@ -289,7 +302,7 @@
     <!-- 푸터 -->
     <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800">
         <div class="container mx-auto px-4 text-center">
-            <p class="mb-2">일학습병행 업무 자동화 프로젝트</p>
+            <p class="mb-2">일학습병행 업무 효율화 프로젝트</p>
             <p class="text-xs text-slate-600">&copy; 2025 Smart Scheduler. All rights reserved.</p>
         </div>
     </footer>
