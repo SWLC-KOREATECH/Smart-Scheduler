@@ -39,7 +39,7 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 100%;
             height: 4px;
             background: #2563eb;
             margin: 0.5rem auto 0;
@@ -155,175 +155,174 @@
         </div>
     </nav>
 
-    <!-- [소개] 파스텔 톤 적용 -->
-    <section id="intro" class="pt-32 pb-24 bg-sky-50">
-        <div class="container mx-auto px-4 max-w-6xl">
+    <!-- [소개] 업그레이드 버전 -->
+    <section id="intro" class="pt-32 pb-24 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+        <!-- 배경 장식 요소 -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-30">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-200 blur-3xl"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 rounded-full bg-purple-200 blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-3/5 space-y-6">
-                    <div
-                        class="inline-flex items-center bg-white border border-blue-200 rounded-full px-4 py-1.5 text-xs font-bold text-blue-600 shadow-sm">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span> 업무 자동화 & AI 튜터링
+                <div class="md:w-3/5 space-y-8">
+                    <div class="inline-flex items-center bg-white border border-blue-100 rounded-full px-5 py-2 text-xs font-bold text-blue-700 shadow-sm animate-fade-in-up">
+                        <span class="relative flex h-3 w-3 mr-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                        </span>
+                        Smart AI Training Solution
                     </div>
-                    <h1 class="text-4xl md:text-5xl font-black leading-tight text-slate-900">
-                        일학습병행 <span class="text-blue-600">스마트 AI</span><br>
-                        <span class="text-slate-800">훈련 지원 시스템</span>
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight text-slate-900 tracking-tight">
+                        행정 업무는 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Zero</span>,<br>
+                        교육 몰입은 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Max</span>
                     </h1>
-                    <p class="text-lg leading-relaxed text-slate-600 max-w-xl">
-                        훈련 일정 자동 알림부터 AI 기반 학습활동서 작성 지원까지.<br>
-                        <strong>담당자의 업무는 줄이고, 훈련생의 역량은 높입니다.</strong>
+                    <p class="text-lg text-slate-600 max-w-xl leading-relaxed">
+                        복잡한 훈련 일정 관리부터 학습 활동서 피드백까지.<br>
+                        <strong>스마트 AI 훈련 지원 시스템</strong>이 단순 반복 업무를 완벽하게 자동화하여,<br>
+                        교사와 훈련생이 오직 <strong>'성장'</strong>에만 집중할 수 있는 환경을 만듭니다.
                     </p>
-                    <div class="flex gap-4 pt-4">
-                        <a href="#manual"
-                            class="px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-bold rounded-xl transition shadow-sm">
-                            사용자 매뉴얼
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#manual" class="text-center px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold rounded-xl transition shadow-lg hover:shadow-xl hover:-translate-y-1">
+                            <i class="fa-solid fa-book-open mr-2 text-blue-500"></i>사용자 매뉴얼
                         </a>
-                        <a href="#setup"
-                            class="px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition shadow-lg shadow-blue-200/50 transform hover:-translate-y-1">
-                            설치 가이드 보기
+                        <a href="#setup" class="text-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-xl transition shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                            <i class="fa-solid fa-rocket mr-2"></i>지금 바로 구축하기
                         </a>
+                    </div>
+                    
+                    <!-- 신뢰도 지표 (예시) -->
+                    <div class="pt-6 flex items-center gap-6 text-slate-400 text-sm font-medium">
+                        <span class="flex items-center"><i class="fa-brands fa-google text-slate-500 mr-2"></i>Google Workspace 연동</span>
+                        <span class="flex items-center"><i class="fa-brands fa-slack text-slate-500 mr-2"></i>Slack 기반 알림</span>
                     </div>
                 </div>
-                <!-- 우측 요약 카드 -->
-                <div class="md:w-2/5 grid grid-cols-1 gap-5 w-full">
-                    <div class="content-card flex items-center gap-5 border-l-4 border-l-blue-500 mb-0">
-                        <div
-                            class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 flex-shrink-0">
-                            <i class="fa-regular fa-clock text-2xl"></i>
+
+                <!-- 우측 요약 카드 (디자인 강화) -->
+                <div class="md:w-2/5 flex flex-col gap-5 w-full">
+                    <!-- Part A Card -->
+                    <div class="group bg-white p-6 rounded-2xl border border-blue-100 shadow-xl shadow-blue-100/50 hover:border-blue-300 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition duration-300">
+                                <i class="fa-regular fa-clock text-2xl"></i>
+                            </div>
+                            <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded">RPA 자동화</span>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-slate-800 text-lg">[Part A] 훈련 관리 자동화 봇</h3>
-                            <p class="text-sm text-slate-500 mt-1">시작/종료 10분 전 자동 알림</p>
-                        </div>
+                        <h3 class="font-bold text-slate-800 text-xl mb-1 group-hover:text-blue-600 transition">훈련 일정 자동 알림 봇</h3>
+                        <p class="text-slate-500 text-sm">일정 변경 시 실시간 동기화 및<br>훈련 시작/종료 10분 전 칼같이 알림</p>
                     </div>
-                    <div class="content-card flex items-center gap-5 border-l-4 border-l-purple-500 mb-0">
-                        <div
-                            class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 flex-shrink-0">
-                            <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+
+                    <!-- Part B Card -->
+                    <div class="group bg-white p-6 rounded-2xl border border-purple-100 shadow-xl shadow-purple-100/50 hover:border-purple-300 transition duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition duration-300">
+                                <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+                            </div>
+                            <span class="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-1 rounded">Generative AI</span>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-slate-800 text-lg">[Part B] AI 지능형 튜터</h3>
-                            <p class="text-sm text-slate-500 mt-1">실시간 질의응답 지원<br>(학습활동서 작성 예시, 직무 용어 안내 등)</p>
-                        </div>
+                        <h3 class="font-bold text-slate-800 text-xl mb-1 group-hover:text-purple-600 transition">AI 지능형 튜터</h3>
+                        <p class="text-slate-500 text-sm">24시간 언제든 직무 질문 해결 및<br>NCS 기반 학습활동서 작성 가이드 제공</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- [도입 효과] (배경: White) -->
-    <section id="features" class="py-24 bg-white border-y border-slate-100">
+    <!-- [도입 효과] 업그레이드 버전 -->
+    <section id="features" class="py-24 bg-white relative">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid md:grid-cols-2 gap-16 items-start">
-
-                <div class="space-y-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- 텍스트 영역 -->
+                <div class="space-y-10">
                     <div>
-                        <span class="text-blue-600 font-bold text-sm tracking-wider uppercase">Background</span>
-                        <h2 class="text-3xl font-bold text-slate-900 mt-2 leading-snug">왜 이 시스템이<br>필요한가요?</h2>
+                        <span class="text-blue-600 font-extrabold text-sm tracking-widest uppercase mb-2 block">Why This System?</span>
+                        <h2 class="text-4xl font-black text-slate-900 leading-tight">
+                            비효율적인 수기 관리,<br>
+                            이제 <span class="text-blue-600 underline decoration-4 decoration-blue-200 underline-offset-4">디지털로 혁신</span>하세요.
+                        </h2>
+                        <p class="text-slate-500 mt-4 text-lg">
+                            사람이 하던 반복적인 알림과 단순 교육 지도는 AI에게 맡기세요.<br>
+                            체계적인 디지털 관리로 행정을 간소화하고, 훈련의 성과를 높입니다.
+                        </p>
                     </div>
-
+                    
                     <div class="space-y-6">
-                        <!-- 기존 문제점 -->
-                        <div class="content-card bg-red-50 border-red-100 p-6 mb-0">
-                            <h3 class="font-bold text-red-500 flex items-center mb-4"><i
-                                    class="fa-solid fa-triangle-exclamation mr-2"></i>기존의 문제점</h3>
-                            <div class="space-y-3">
-                                <div class="flex items-start">
-                                    <i class="fa-solid fa-xmark text-red-400 mt-1 mr-3"></i>
-                                    <p class="text-slate-700 text-sm">매번 카톡/문자로 일정을 공지해야 하는 <strong>반복 업무의 비효율</strong>
-                                    </p>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fa-solid fa-xmark text-red-400 mt-1 mr-3"></i>
-                                    <p class="text-slate-700 text-sm">시간 착오로 인한 훈련생들의 <strong>비콘 출결 누락 빈번</strong></p>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fa-solid fa-xmark text-red-400 mt-1 mr-3"></i>
-                                    <p class="text-slate-700 text-sm">학습근로자의 직무 이해도 편차에 따른 <strong>학습활동서 내용의 구체성
-                                            결여</strong></p>
-                                </div>
+                        <!-- 비교 포인트 1 -->
+                        <div class="relative pl-8 border-l-2 border-slate-200 hover:border-blue-500 transition duration-300">
+                            <h4 class="text-lg font-bold text-slate-800 mb-2">😫 기존: 담당자의 업무 과중</h4>
+                            <p class="text-sm text-slate-500 mb-2 line-through">매일 훈련 시간마다 단톡방 공지, 지각생 개별 연락...</p>
+                            <div class="flex items-center text-blue-600 font-bold bg-blue-50 w-fit px-3 py-1 rounded-lg">
+                                <i class="fa-solid fa-arrow-right mr-2"></i> 일정 관리 시간 100% 단축
                             </div>
                         </div>
 
-                        <!-- 도입 효과 -->
-                        <div class="content-card bg-blue-50 border-blue-100 p-6 mb-0">
-                            <h3 class="font-bold text-blue-600 flex items-center mb-4"><i
-                                    class="fa-solid fa-wand-magic-sparkles mr-2"></i>도입 기대 효과</h3>
-                            <div class="space-y-3">
-                                <div class="flex items-start">
-                                    <i class="fa-solid fa-check text-blue-500 mt-1 mr-3"></i>
-                                    <p class="text-slate-700 text-sm">일정 관리 시간 <strong>100% 단축</strong> 및 업무 효율화</p>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fa-solid fa-check text-blue-500 mt-1 mr-3"></i>
-                                    <p class="text-slate-700 text-sm">10분 전 칼알림으로 <strong>출결률 및 정시 입실률 향상</strong></p>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="fa-solid fa-check text-blue-500 mt-1 mr-3"></i>
-                                    <p class="text-slate-700 text-sm">별도 문자 비용 없이 슬랙을 활용해 <strong>평생 무료 운영</strong></p>
-                                </div>
+                        <!-- 비교 포인트 2 -->
+                        <div class="relative pl-8 border-l-2 border-slate-200 hover:border-red-500 transition duration-300">
+                            <h4 class="text-lg font-bold text-slate-800 mb-2">😰 기존: 휴먼 에러 및 출결 누락</h4>
+                            <p class="text-sm text-slate-500 mb-2 line-through">"시간을 착각했어요", "비콘 찍는 걸 깜빡했어요"...</p>
+                            <div class="flex items-center text-red-500 font-bold bg-red-50 w-fit px-3 py-1 rounded-lg">
+                                <i class="fa-solid fa-arrow-right mr-2"></i> 착오로 인한 직권입력 0건 목표
+                            </div>
+                        </div>
+
+                        <!-- 비교 포인트 3 -->
+                        <div class="relative pl-8 border-l-2 border-slate-200 hover:border-purple-500 transition duration-300">
+                            <h4 class="text-lg font-bold text-slate-800 mb-2">🤔 기존: 형식적인 학습일지</h4>
+                            <p class="text-sm text-slate-500 mb-2 line-through">무엇을 적어야 할지 몰라 매번 "복사 붙여넣기"만 반복...</p>
+                            <div class="flex items-center text-purple-600 font-bold bg-purple-50 w-fit px-3 py-1 rounded-lg">
+                                <i class="fa-solid fa-arrow-right mr-2"></i> NCS 기반 고품질 일지 작성
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 시스템 구조도 -->
-                <div class="content-card bg-slate-50 p-10 h-full flex flex-col justify-center border-slate-200 mb-0">
-                    <h3 class="text-center font-bold text-slate-500 mb-10 text-xs tracking-[0.2em]">SYSTEM ARCHITECTURE
-                    </h3>
+                <!-- 시스템 구조도 (디자인 유지하되 강조) -->
+                <div class="bg-slate-50 rounded-3xl p-10 h-full flex flex-col justify-center border border-slate-200 shadow-inner relative overflow-hidden">
+                    <!-- 배경 패턴 -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-slate-200 rounded-full blur-3xl opacity-50 -mr-10 -mt-10"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-50 -ml-10 -mb-10"></div>
 
-                    <div class="relative flex flex-col items-center gap-4">
-                        <div class="absolute left-1/2 top-4 bottom-4 w-0.5 bg-slate-200 -z-10 hidden md:block"></div>
-
-                        <div class="grid grid-cols-1 gap-6 w-full max-w-sm mx-auto">
-                            <!-- 노드 1 -->
-                            <div
-                                class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-slate-200 z-10 relative">
-                                <div
-                                    class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa-solid fa-table text-green-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <span class="text-sm font-bold text-slate-800 block">Google Sheets</span>
-                                    <span class="text-xs text-slate-500">일정 입력 및 관리</span>
-                                </div>
+                    <h3 class="text-center font-extrabold text-slate-400 mb-10 text-xs tracking-[0.3em] relative z-10">AUTOMATION ARCHITECTURE</h3>
+                    
+                    <div class="relative flex flex-col items-center gap-5 z-10">
+                        
+                        <!-- 노드 1: Google Sheets -->
+                        <div class="flex items-center bg-white p-4 pr-8 rounded-xl shadow-lg border-l-4 border-l-green-500 w-64 transform hover:scale-105 transition duration-300">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 text-green-600">
+                                <i class="fa-solid fa-table text-lg"></i>
                             </div>
-
-                            <div class="text-center text-slate-300"><i class="fa-solid fa-arrow-down"></i></div>
-
-                            <!-- 노드 2 -->
-                            <div
-                                class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-slate-200 z-10 relative">
-                                <div
-                                    class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fa-solid fa-gear text-slate-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <span class="text-sm font-bold text-slate-800 block">Apps Script</span>
-                                    <span class="text-xs text-slate-500">자동화 엔진 구동</span>
-                                </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-bold uppercase">Database</span>
+                                <span class="text-sm font-bold text-slate-800 block">Google Sheets</span>
                             </div>
+                        </div>
+                        
+                        <div class="text-center text-slate-300 animate-bounce"><i class="fa-solid fa-arrow-down"></i></div>
 
-                            <div class="text-center text-slate-300"><i class="fa-solid fa-arrow-down"></i></div>
+                        <!-- 노드 2: Apps Script (Engine) - 디자인 변경 (Cyan Accent) -->
+                        <div class="flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 p-4 pr-8 rounded-xl shadow-lg border-l-4 border-l-cyan-300 w-64 transform hover:scale-105 transition duration-300">
+                            <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 text-cyan-300">
+                                <i class="fa-solid fa-microchip text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-cyan-100 font-bold uppercase tracking-wider">Core Engine</span>
+                                <span class="text-sm font-bold text-white block">Apps Script + AI</span>
+                            </div>
+                        </div>
 
-                            <!-- 노드 3 분기 -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <div
-                                    class="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm border border-slate-200 z-10 text-center">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
-                                        <i class="fa-solid fa-calendar-days text-blue-500"></i>
-                                    </div>
-                                    <span class="text-xs font-bold text-slate-800">Google<br>Calendar</span>
-                                    <span class="text-[10px] text-slate-500 mt-1">일정 저장</span>
-                                </div>
-                                <div
-                                    class="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm border border-slate-200 z-10 text-center">
-                                    <div
-                                        class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
-                                        <i class="fa-brands fa-slack text-purple-600"></i>
-                                    </div>
-                                    <span class="text-xs font-bold text-slate-800">Slack<br>Alarm</span>
-                                    <span class="text-[10px] text-slate-500 mt-1">10분전 발송</span>
-                                </div>
+                        <div class="text-center text-slate-300 animate-bounce"><i class="fa-solid fa-arrow-down"></i></div>
+
+                        <!-- 노드 3: Output -->
+                        <div class="grid grid-cols-2 gap-3 w-64">
+                            <div class="flex flex-col items-center bg-white p-3 rounded-xl shadow-md border border-slate-100 text-center hover:shadow-lg transition">
+                                <i class="fa-solid fa-calendar-check text-blue-500 text-2xl mb-2"></i>
+                                <span class="text-[10px] font-bold text-slate-600">캘린더 동기화</span>
+                            </div>
+                            <div class="flex flex-col items-center bg-white p-3 rounded-xl shadow-md border border-slate-100 text-center hover:shadow-lg transition">
+                                <i class="fa-brands fa-slack text-purple-600 text-2xl mb-2"></i>
+                                <span class="text-[10px] font-bold text-slate-600">일정 알림 & 튜터</span>
                             </div>
                         </div>
                     </div>
@@ -332,11 +331,12 @@
         </div>
     </section>
 
-    <!-- [상세 매뉴얼] (위치 이동 및 배경: Slate-50) -->
+    <!-- [상세 매뉴얼] -->
     <section id="manual" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="section-title text-center w-full mb-12">상세 사용자 매뉴얼</h2>
-
+            <div class="text-center mb-12">
+                <h2 class="section-title w-fit mx-auto">📖 상세 사용자 매뉴얼</h2>
+            </div>
             <div class="grid lg:grid-cols-2 gap-8">
 
                 <!-- Part A: 자동 알림 봇 타이틀 -->
@@ -397,7 +397,7 @@
                                     <td>
                                         <ul class="list-disc list-inside">
                                             <li>캘린더와 슬랙 알림 메시지에 표시될 <strong>실제 일정 제목</strong></li>
-                                            <li>말머리를 제외한 순수 제목만 입력하세요.</li>
+                                            <li>D열 키워드를 제외한 순수 제목만 입력하세요.</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -438,8 +438,8 @@
                 <div class="content-card border-l-4 border-l-blue-500">
                     <h3 class="text-xl font-bold text-blue-600 mb-4"><i class="fa-solid fa-network-wired mr-2"></i>2. 알림
                         발송 원리</h3>
-                    <p class="text-slate-600 mb-4 text-sm">D열에 입력한 <strong>[말머리]</strong>에 따라 알림이 가는 방이 달라집니다. (Apps
-                        Script 설정에서 변경 가능)</p>
+                    <p class="text-slate-600 mb-4 text-sm">D열에 입력한 <strong>[말머리]</strong>에 따라 알림이 가는 방이 달라집니다.<br>
+                        (Apps Script 설정에서 변경 가능)</p>
 
                     <div class="space-y-3">
                         <div class="flex items-center p-3 bg-white rounded border border-slate-200">
@@ -545,44 +545,107 @@
                     <div class="space-y-4">
                         <!-- 일지 작성 -->
                         <div
-                            class="group p-4 bg-purple-50 rounded-xl border border-purple-100 hover:border-purple-300 transition cursor-default">
-                            <div class="flex justify-between items-center mb-2">
-                                <code class="text-purple-700 font-bold text-lg">/일지 [키워드]</code>
+                            class="group p-5 bg-purple-50 rounded-xl border border-purple-100 hover:border-purple-300 transition cursor-default shadow-sm">
+                            <div class="flex justify-between items-center mb-3">
+                                <code class="text-purple-700 font-bold text-lg">/일지 [훈련 수행 핵심 키워드]</code>
                                 <span
                                     class="bg-purple-200 text-purple-800 text-[10px] px-2 py-1 rounded-full font-bold">핵심
                                     기능</span>
                             </div>
-                            <p class="text-sm text-slate-600 mb-2">훈련내용(키워드)을 입력하면, 학습활동서 예시를 작성해줍니다.</p>
-                            <div class="bg-white p-2 rounded border border-purple-100 text-xs text-slate-400">
-                                사용 예: <span class="text-purple-600">/일지 에스프레소 추출 실습, 원두 분쇄도 조절, 우유 스팀 온도 맞추기</span>
+                            <p class="text-sm text-slate-600 mb-4">키워드를 입력하면, 학습활동서 작성 예시를 자동으로
+                                생성합니다.</p>
+
+                            <!-- 예시 박스 -->
+                            <div class="bg-white p-3 rounded-lg border border-purple-100 text-xs shadow-inner">
+                                <div class="flex items-center mb-3">
+                                    <span
+                                        class="bg-slate-100 text-slate-600 font-bold px-2 py-1 rounded mr-2 border border-slate-200">입력</span>
+                                    <span class="text-slate-700 font-medium">/일지 에스프레소 추출 실습, 우유 스팀</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 text-purple-600">
+                                        <i class="fa-solid fa-robot"></i>
+                                    </div>
+                                    <div
+                                        class="bg-slate-50 p-3 rounded-r-lg rounded-bl-lg border border-slate-200 text-slate-700 w-full relative">
+                                        <div class="font-bold text-purple-600 mb-1">AI 튜터</div>
+                                        - 오늘 에스프레소 추출 실습을 통해 원두 분쇄도의 중요성을 측정하고, 분쇄도를 12단계 중 7단계로 조정하여 최적의 상태를
+                                        확인했습니다.<br>
+                                        - 또한 우유 스팀 온도를 55도에서 65도 사이로 맞추는 방법을 학습하여, 스팀 온도를 60도에 맞추어 확인했습니다.<br>
+                                        - 이러한 실습을 통해 에스프레소 추출의 기술적 깊이와 원두 분쇄도, 우유 스팀 온도의 조절이 맛에 미치는 영향을 측정하고, 이를 바탕으로 더
+                                        나은 에스프레소 추출 방법을 체득했습니다.
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 안전 (사용 예 추가됨) -->
+                        <!-- 안전 -->
                         <div
-                            class="group p-4 bg-green-50 rounded-xl border border-green-100 hover:border-green-300 transition cursor-default">
-                            <code class="text-green-700 font-bold text-lg block mb-2">/안전 [작업명 또는 장비명]</code>
-                            <p class="text-sm text-slate-600 mb-2">해당 작업이나 장비 사용 전 반드시 확인해야 할 안전 수칙을 알려줍니다.</p>
-                            <div class="bg-white p-2 rounded border border-green-100 text-xs text-slate-400">
-                                사용 예: <span class="text-green-600">/안전 용접기 사용</span>
+                            class="group p-5 bg-green-50 rounded-xl border border-green-100 hover:border-green-300 transition cursor-default shadow-sm">
+                            <code class="text-green-700 font-bold text-lg block mb-3">/안전 [작업명]</code>
+                            <p class="text-sm text-slate-600 mb-4">해당 작업이나 장비 사용 전 반드시 확인해야 할 핵심 안전 수칙 5가지를 즉시 알려줍니다.
+                            </p>
+
+                            <!-- 예시 박스 -->
+                            <div class="bg-white p-3 rounded-lg border border-green-100 text-xs shadow-inner">
+                                <div class="flex items-center mb-3">
+                                    <span
+                                        class="bg-slate-100 text-slate-600 font-bold px-2 py-1 rounded mr-2 border border-slate-200">입력</span>
+                                    <span class="text-slate-700 font-medium">/안전 아크 용접기 사용</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 text-green-600">
+                                        <i class="fa-solid fa-robot"></i>
+                                    </div>
+                                    <div
+                                        class="bg-slate-50 p-3 rounded-r-lg rounded-bl-lg border border-slate-200 text-slate-700 w-full">
+                                        <div class="font-bold text-green-600 mb-1">AI 튜터</div>
+                                        <strong>⚠️ [아크 용접 작업 안전수칙]</strong><br>
+                                        1. 보안면 및 가죽 앞치마 등 보호구 착용 철저<br>
+                                        2. 작업장 주변 인화성 물질 제거 확인<br>
+                                        3. 감전 방지를 위한 자동전격방지기 설치 확인<br>
+                                        ...
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 질문 (사용 예 추가됨) -->
+                        <!-- 질문 -->
                         <div
-                            class="group p-4 bg-blue-50 rounded-xl border border-blue-100 hover:border-blue-300 transition cursor-default">
-                            <code class="text-blue-700 font-bold text-lg block mb-2">/질문 [궁금한 용어]</code>
-                            <p class="text-sm text-slate-600 mb-2">낯선 기술 용어나 개념을 쉽게 설명해줍니다.</p>
-                            <div class="bg-white p-2 rounded border border-blue-100 text-xs text-slate-400">
-                                사용 예: <span class="text-blue-600">/질문 인터록 회로가 뭐야?</span>
+                            class="group p-5 bg-blue-50 rounded-xl border border-blue-100 hover:border-blue-300 transition cursor-default shadow-sm">
+                            <code class="text-blue-700 font-bold text-lg block mb-3">/질문 [용어]</code>
+                            <p class="text-sm text-slate-600 mb-4">어렵고 낯선 직무 기술 용어나 개념을 신입사원 눈높이에서 알기 쉽게 설명해줍니다.</p>
+
+                            <!-- 예시 박스 -->
+                            <div class="bg-white p-3 rounded-lg border border-blue-100 text-xs shadow-inner">
+                                <div class="flex items-center mb-3">
+                                    <span
+                                        class="bg-slate-100 text-slate-600 font-bold px-2 py-1 rounded mr-2 border border-slate-200">입력</span>
+                                    <span class="text-slate-700 font-medium">/질문 인터록 회로가 뭐야?</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-600">
+                                        <i class="fa-solid fa-robot"></i>
+                                    </div>
+                                    <div
+                                        class="bg-slate-50 p-3 rounded-r-lg rounded-bl-lg border border-slate-200 text-slate-700 w-full">
+                                        <div class="font-bold text-blue-600 mb-1">AI 튜터</div>
+                                        <strong>💡 인터록(Interlock)이란?</strong><br>
+                                        '동시 동작 방지' 안전 장치입니다. 예를 들어, 엘리베이터 문이 열려 있으면 절대로 출발하지 않게 막아주는 회로와 같습니다. 두 가지 동작이
+                                        동시에 일어나면 위험할 때 사용합니다.
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- 도움말 -->
                         <div
-                            class="group p-4 bg-slate-50 rounded-xl border border-slate-200 hover:border-slate-300 transition cursor-default">
+                            class="group p-5 bg-slate-50 rounded-xl border border-slate-200 hover:border-slate-300 transition cursor-default shadow-sm">
                             <code class="text-slate-700 font-bold text-lg block mb-2">/도움말</code>
-                            <p class="text-sm text-slate-600">AI 튜터의 사용 방법과 명령어 목록을 보여줍니다. 봇이 정상 작동하는지 테스트할 때 유용합니다.</p>
+                            <p class="text-sm text-slate-600">사용 가능한 모든 명령어와 사용법을 안내해줍니다. 봇이 정상 작동하는지 테스트할 때 유용합니다.</p>
                         </div>
                     </div>
                 </div>
@@ -595,7 +658,7 @@
     <section id="setup" class="py-24 bg-white">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="section-header">
-                <h2 class="section-title">🚀 초기 설치 가이드</h2>
+                <h2 class="section-title text-center w-fit mx-auto mb-12">🚀 초기 설치 가이드</h2>
             </div>
 
             <!-- 1. 사전 준비사항 -->
@@ -775,7 +838,8 @@
                                 <!-- 3. Slack 앱 이름 변경 (필수 유지) -->
                                 <li>
                                     <strong>[필수 설정 1] Slack 앱 이름 변경:</strong><br>
-                                    앱이 생성되면 왼쪽 메뉴 <strong>[App Home]</strong> 이동 &rarr; 화면 중앙 <strong>[App Display Name] Edit 버튼</strong> 클릭 &rarr;
+                                    앱이 생성되면 왼쪽 메뉴 <strong>[App Home]</strong> 이동 &rarr; 화면 중앙 <strong>[App Display Name]
+                                        Edit 버튼</strong> 클릭 &rarr;
                                     <strong>[Display Name (Bot Name)]</strong>에 기존 이름 삭제 후 앱 이름 입력(훈련일정 알리미) 후 저장.<br>
                                 </li>
 
@@ -802,7 +866,7 @@
                                 자동화 코드가 이미 심어져 있는 엑셀 양식을 내 구글 드라이브로 가져옵니다.
                             </p>
                             <div class="mb-4">
-                                <a href="https://docs.google.com/spreadsheets/d/1bOMRuGxRPFkPlIiAQQFbjYaJ0MJ0dGLq9NO-R_Fx3Fk/copy"
+                                <a href="https://docs.google.com/spreadsheets/d/13YqJwaSbvPN1v2xGPqqtivTeJf5jt3tx7xVaxjRKg4M/copy"
                                     target="_blank"
                                     class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition shadow-md group text-sm">
                                     <i class="fa-solid fa-table mr-2 group-hover:animate-bounce"></i>
@@ -834,8 +898,10 @@
                                     <ul
                                         class="list-disc list-inside ml-4 mt-2 mb-2 text-xs text-slate-600 bg-white p-3 rounded border border-slate-200">
                                         <li><code>[기본 설정 1] TARGET_CALENDAR_NAME</code>: Step 0에서 만든 캘린더 이름 ('출결')</li>
-                                        <li><code>[기본 설정 2] ADMIN_WEBHOOK</code>: Step 2. [필수 설정 2]에서 확보한 '#관리자-알림' Webhook URL</li>
-                                        <li><code>[기본 설정 3] CHANNEL_MAP</code>: Step 2. [필수 설정 2]에서 확보한 '#공지-일학습반, #공지-한기대반' Webhook URL을 각각 입력</li>
+                                        <li><code>[기본 설정 2] ADMIN_WEBHOOK</code>: Step 2. [필수 설정 2]에서 확보한 '#관리자-알림'
+                                            Webhook URL</li>
+                                        <li><code>[기본 설정 3] CHANNEL_MAP</code>: Step 2. [필수 설정 2]에서 확보한 '#공지-일학습반,
+                                            #공지-한기대반' Webhook URL을 각각 입력</li>
                                     </ul>
                                 </li>
                                 <li>저장(Ctrl+S) 후, 왼쪽 메뉴의 <strong>시계 아이콘(트리거)</strong>을 클릭합니다.</li>
@@ -843,7 +909,17 @@
                                 <li>실행할 함수: <code>checkRealTimeAlerts</code> / 이벤트 소스: <strong>시간 기반</strong> / 유형:
                                     <strong>분 단위</strong> / 간격: <strong>1분마다</strong>
                                 </li>
-                                <li>[저장] 클릭 (최초 1회 권한 승인 필요)</li>
+                                <li>
+                                    <strong>[저장]</strong> 버튼을 누르면 <strong>권한 승인 팝업</strong>이 뜹니다. 당황하지 말고 아래 순서대로 진행하세요.<br>
+                                    <div class="mt-3 bg-red-50 border border-red-200 rounded-lg p-4 text-xs text-slate-700 shadow-sm">
+                                        <strong class="text-red-600 flex items-center mb-2 text-sm"><i class="fa-solid fa-triangle-exclamation mr-2"></i>'확인되지 않은 앱' 경고가 뜰 때 해결법</strong>
+                                        <div class="space-y-2 pl-1">
+                                            <p>1. 계정 선택 후 경고창이 뜨면, 좌측 하단 <strong>[고급 (Advanced)]</strong> 글씨를 클릭합니다.</p>
+                                            <p>2. 아래로 펼쳐지는 내용 중 맨 밑에 있는 <strong>[이동: 훈련일정...(안전하지 않음)]</strong> 링크를 클릭합니다.</p>
+                                            <p>3. 마지막으로 <strong>[허용 (Allow)]</strong> 버튼을 누르면 설정이 완료됩니다.</p>
+                                        </div>
+                                    </div>
+                                </li>
                             </ol>
                         </div>
                     </div>
@@ -981,35 +1057,38 @@
                                     </li>
 
                                     <!-- 3. Slack 앱 이름 변경 (필수 유지) -->
-                                <li>
-                                    <strong>[필수 설정 1] Slack 앱 이름 변경:</strong><br>
-                                    앱이 생성되면 왼쪽 메뉴 <strong>[App Home]</strong> 이동 &rarr; 화면 중앙 <strong>[App Display Name] Edit 버튼</strong> 클릭 &rarr;
-                                    <strong>[Display Name (Bot Name)]</strong>에 기존 이름 삭제 후 앱 이름 입력(훈련일정 알리미) 후 저장.<br>
-                                </li>
+                                    <li>
+                                        <strong>[필수 설정 1] Slack 앱 이름 변경:</strong><br>
+                                        앱이 생성되면 왼쪽 메뉴 <strong>[App Home]</strong> 이동 &rarr; 화면 중앙 <strong>[App Display
+                                            Name] Edit 버튼</strong> 클릭 &rarr;
+                                        <strong>[Display Name (Bot Name)]</strong>에 기존 이름 삭제 후 앱 이름 입력(AI 튜터) 후 저장.<br>
+                                    </li>
 
-                                <!-- 4. Webhook 설정 (필수 유지) -->
-                                <li>
-                                    <strong>[필수 설정 2] 알림 주소(Webhook) 발급:</strong><br>
-                                    왼쪽 메뉴 <strong>[Incoming Webhooks]</strong> 이동 &rarr; 하단 <strong>[Add New
-                                        Webhook to Workspace]</strong> 클릭 &rarr;
-                                    Step 1-2에서 만든 키워드 채널(#공지-한기대반 등) 선택 후 [Allow].<br>
-                                    <span class="text-blue-600 font-bold">* 생성된 Webhook URL을 복사해 메모장에 저장 (채널별 반복)</span>
-                                </li>
+                                    <!-- 4. Webhook 설정 (필수 유지) -->
+                                    <li>
+                                        <strong>[필수 설정 2] 알림 주소(Webhook) 발급:</strong><br>
+                                        왼쪽 메뉴 <strong>[Incoming Webhooks]</strong> 이동 &rarr; 하단 <strong>[Add New
+                                            Webhook to Workspace]</strong> 클릭 &rarr;
+                                        Step 1-2에서 만든 키워드 채널(#공지-한기대반 등) 선택 후 [Allow].<br>
+                                        <span class="text-blue-600 font-bold">* 생성된 Webhook URL을 복사해 메모장에 저장 (채널별
+                                            반복)</span>
+                                    </li>
 
-                                <!-- 5. Request URL 설정 (필수 유지) -->
-                                <li>
-                                    <strong>[필수 설정 3] Request URL 연결:</strong><br>
-                                    왼쪽 메뉴 <strong>[Slash Commands]</strong> 이동 &rarr; 아무 명령어의 <strong>연필
-                                        아이콘(Edit)</strong> 클릭.<br>
-                                    <strong>Request URL</strong> 칸에 있는 임시 주소(example.com)를 지우고, <strong>Apps Script 배포
-                                        주소(Web App URL)</strong>로 변경 후 저장.<br>
-                                    <span class="text-red-500 text-xs font-bold">(※ 이 작업은 Part B. Step 1에서 웹 앱 URL이 나온 뒤에
-                                        진행하세요!)</span>
-                                </li>
-                            </ol>
+                                    <!-- 5. Request URL 설정 (필수 유지) -->
+                                    <li>
+                                        <strong>[필수 설정 3] Request URL 연결:</strong><br>
+                                        왼쪽 메뉴 <strong>[Slash Commands]</strong> 이동 &rarr; 아무 명령어의 <strong>연필
+                                            아이콘(Edit)</strong> 클릭.<br>
+                                        <strong>Request URL</strong> 칸에 있는 임시 주소(example)를 지우고, <strong>Apps Script 배포
+                                            주소(Web App URL)</strong>로 변경 후 저장.<br>
+                                        <span class="text-red-500 text-xs font-bold">(※ 이 작업은 Part B. Step 1에서 웹 앱 URL이
+                                            나온 뒤에
+                                            진행하세요!)</span>
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                     <!-- Step 3 (Part B) -->
                     <div class="content-card border-l-4 border-l-purple-500">
