@@ -628,13 +628,12 @@
                         <div
                             class="group p-5 bg-purple-50 rounded-xl border border-purple-100 hover:border-purple-300 transition cursor-default shadow-sm">
                             <div class="flex justify-between items-center mb-3">
-                                <code class="text-purple-700 font-bold text-lg">/일지 [키워드]</code>
+                                <code class="text-purple-700 font-bold text-lg">/일지 [세부 훈련내용]</code>
                                 <span
                                     class="bg-purple-200 text-purple-800 text-[10px] px-2 py-1 rounded-full font-bold">핵심
                                     기능</span>
                             </div>
-                            <p class="text-sm text-slate-600 mb-4">오늘 배운 내용(키워드)만 입력하면, NCS 기준에 맞는 전문적인 학습일지 문장을 자동으로
-                                생성합니다.</p>
+                            <p class="text-sm text-slate-600 mb-4">세부 훈련내용(훈련주제, 훈련내용, 핵심작업 등)을 입력하면, 학습활동서 예시를 작성해줍니다.</p>
 
                             <!-- 예시 박스 -->
                             <div class="bg-white p-3 rounded-lg border border-purple-100 text-xs shadow-inner">
@@ -663,7 +662,7 @@
                         <!-- 안전 -->
                         <div
                             class="group p-5 bg-green-50 rounded-xl border border-green-100 hover:border-green-300 transition cursor-default shadow-sm">
-                            <code class="text-green-700 font-bold text-lg block mb-3">/안전 [작업명]</code>
+                            <code class="text-green-700 font-bold text-lg block mb-3">/안전 [작업명 또는 장비명]</code>
                             <p class="text-sm text-slate-600 mb-4">해당 작업이나 장비 사용 전 반드시 확인해야 할 핵심 안전 수칙 5가지를 즉시 알려줍니다.
                             </p>
 
@@ -736,8 +735,7 @@
                                     class="bg-orange-200 text-orange-800 text-[10px] px-2 py-1 rounded-full font-bold">핵심
                                     기능</span>
                             </div>
-                            <p class="text-sm text-slate-600 mb-4">세부 훈련내용 및 학습근로자의 성취도와 태도를 분석하여 기업현장교사 의견(총평)을 자동으로
-                                작성해줍니다.</p>
+                            <p class="text-sm text-slate-600 mb-4">세부 훈련내용 및 학습근로자의 성취도와 태도를 분석하여 기업현장교사 의견(총평) 예시를 작성해줍니다.</p>
 
                             <!-- 예시 박스 -->
                             <div class="bg-white p-3 rounded-lg border border-orange-100 text-xs shadow-inner">
@@ -1226,7 +1224,7 @@
             {
                 "command": "/일지",
                 "url": "https://script.google.com/macros/s/exampleF/exec",
-                "description": "키워드를 입력하면 AI가 학습활동서 예시를 작성해줍니다.",
+                "description": "세부 훈련내용을 입력하면 학습활동서 예시를 작성해줍니다.",
                 "usage_hint": "[훈련 수행 핵심 키워드]",
                 "should_escape": false
             },
@@ -1246,21 +1244,21 @@
             {
                 "command": "/상담",
                 "url": "https://script.google.com/macros/s/example/exec",
-                "description": "학습근로자 상담 일지 작성 도우미",
+                "description": "학습근로자 상담 일지 예시를 작성해줍니다.",
                 "usage_hint": "[자유로운 상담 메모]",
                 "should_escape": false
             },
             {
                 "command": "/의견",
                 "url": "https://script.google.com/macros/s/example/exec",
-                "description": "기업현장교사 의견(총평) 작성 도우미",
+                "description": "기업현장교사 의견(총평) 예시를 작성해줍니다.",
                 "usage_hint": "[훈련 내용] (선택: + 잘 수행한 점, 어려워한 점)",
                 "should_escape": false
             },
             {
                 "command": "/퀴즈",
                 "url": "https://script.google.com/macros/s/example/exec",
-                "description": "오늘의 훈련 쪽지시험",
+                "description": "훈련 내용을 바탕으로 핵심 퀴즈(2문제)를 즉시 생성합니다.",
                 "usage_hint": "[세부 훈련내용]",
                 "should_escape": false
             }
